@@ -12,7 +12,7 @@ import (
 
 //global vars
 var (
-	Version       string = "1.1.2"
+	Version       string = "1.0.0"
 	RADatPath     string
 	RAKDNr        string
 	protPortFlag  string
