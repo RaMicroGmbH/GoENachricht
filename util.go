@@ -6,5 +6,5 @@ import (
 
 func getPath() {
 	fmt.Println("just testing...")
-	fmt.Println("test again")
+
 }
