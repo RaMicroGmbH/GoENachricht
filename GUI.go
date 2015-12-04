@@ -69,6 +69,8 @@ func startUIService(Port string) {
 	// Mapping to the static folders, is importend for mapping to assets
 	mux.Handle("/js/", http.FileServer(assetfs.AssetFS()))
 	mux.Handle("/css/", http.FileServer(assetfs.AssetFS()))
+	mux.Handle("/css/images/", http.FileServer(assetfs.AssetFS()))
+	mux.Handle("/css/images/igHtmlEditor/", http.FileServer(assetfs.AssetFS()))
 	mux.Handle("/fonts/", http.FileServer(assetfs.AssetFS()))
 
 	// Add routes

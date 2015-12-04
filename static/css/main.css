@@ -18,6 +18,7 @@ input[type=number] {
 	-moz-appearance: textfield;
 }
 
+
 .panel-title {
 	font-size: 20px;
 }
@@ -32,6 +33,17 @@ input[type=number] {
 
 .dataspace tr td{
 	padding:10px;
+}
+
+#edt_ENachricht{
+	
+	margin-right: 10px;		
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.btn-lg {
+	
+	width:100px !important;
 }
 
 .form-control {
@@ -63,3 +75,162 @@ input[type=number] {
     padding: 8px 54px;
 }
 
+.auswahllist {
+	width: 800px; 
+	height: 550px; 
+	position: absolute;
+	left: 50%; 
+	margin-left: -400px;
+}
+
+.thebuttons{
+	width: 200px; 
+	height: 50px; 
+	position: absolute;
+	top: 490px;
+	left: 50%; 
+	margin-left: 185px;	
+}
+
+.btnaccept{
+	width:80px; 
+	height:40px; 
+	position:absolute;
+	left:10px; 	
+}
+
+.btncancel{
+	width:80px; 
+	height:40px; 
+	position:absolute;
+	left:110px; 		
+}
+
+.grosslist {
+	width:600px;
+	height:210px;
+	position:absolute;
+	left:50%;
+	margin-left:-300px;
+}
+
+.imghelp {
+	height:30px;
+	width:30px;
+	position:absolute;
+	top:120px;
+	left:50%;
+	margin-left:320px;
+}
+
+.imginfo {
+	height:30px;
+	width:30px;
+	position:absolute;
+	top:120px;
+	left:50%;
+	margin-left:360px;
+}
+
+.htmlEdit {
+	position:absolute; 
+	top:0px; 
+	left:50%; 
+	margin-left:0px; 
+	border-width:5px; 
+	
+	background-color: rgb(255, 240, 255);
+	font: 14px/normal Arial, Calibri, Tahoma, Helvetica, Verdana; 
+	color: rgb(255, 210, 240); 
+	text-transform: none; 
+	text-indent: 0px; 
+	letter-spacing: normal; 
+	word-spacing: 0px; 
+	white-space: normal; 
+	orphans: 2; 
+	widows: 2; 
+	font-size-adjust: auto; 
+	font-stretch: normal; 
+	-webkit-text-size-adjust: auto; 
+	-webkit-text-stroke-width: 0px; 
+}
+
+.DivTools {
+	width: 800px;
+	height: 400px;
+	position: absolute;
+	top: 580px;
+	left: 50%;
+	margin-left: -400px;
+	border-width: 4px;
+}
+
+.Txtar {
+	width: 180px;
+	height: 70px;
+	resize: none;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------
+|						 CHECKBOX STYLING 									   |
+ -----------------------------------------------------------------------------*/
+.checkbox label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 5px;
+}
+
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 0;
+  margin-left: -23px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 2px;
+  font-size: 15px;
+  color: #555555;
+}    
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  z-index: 1;
+
+}
+
+.checkbox input[type="checkbox"]:checked + label::after{
+  font-family: "FontAwesome";
+  content: "\f00c";
+}
+
+.checkbox-success input[type="checkbox"]:checked + label::before{
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.checkbox-success input[type="checkbox"]:checked + label::after{
+  color: #fff;
+}
+
+/*-----------------  EOF CHECKBOX STYLING  -----------------------------------*/	

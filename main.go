@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 
+	"./controllers"
 	"log"
 	"net/smtp"
 	"os"
@@ -12,7 +13,7 @@ import (
 
 //global vars
 var (
-	Version       string = "1.0.0"
+	Version       string = "1.2.0"
 	RADatPath     string
 	RAKDNr        string
 	protPortFlag  string
@@ -34,6 +35,7 @@ func main() {
 	var wg sync.WaitGroup
 
 	wg.Add(1)
+	controllers.HandleFiles()
 	go startUIService(uiPortFlag)
 	wg.Wait()
 }

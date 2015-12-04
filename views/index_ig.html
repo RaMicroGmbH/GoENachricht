@@ -1,0 +1,83 @@
+{{define "body"}}
+  <meta charset="utf-8">    
+  <title>{{.Title}}</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- LAYOUT -->
+	<div id="layout" style="height:700px;">
+			<!-- LEFT MARGIN -->
+            <div class="left"> 
+                  
+            </div>
+			<!-- EOF LEFT MARGIN -->
+            <div class="right">
+                  
+            </div>
+			
+            <div class="header">
+				<span><b>RA-MICRO <span style='color: red'>Go</span> App E-Nachricht </b>
+				<span style="font-size: 18px">{{.Version}}</span></span></h1>
+			</div>
+			
+			<!-- BODY SECTION-->
+            <div class="center">                 
+				<fieldset>
+					<legend>An E-Postkorb</legend>	
+					<table class="table">						    
+						    <tbody>						   
+						    	<tr class="borderless">
+									<td> 
+										<div id="checkboxSelectUsers"></div>
+										<input type="checkbox" id="cb_sofortnachricht" /><label for="cb_sofortnachricht">Als Sofortnachricht anzeigen</label>
+										<span>&nbsp;</span>   
+									</td>	
+									<td>    
+										<span>&nbsp;</span> 
+									</td>
+									
+									<td>    
+										<span>&nbsp;</span>  
+									</td>
+									<td>
+										<label for="in_eakte">E-Akte :</label>
+										<input type="text" id="in_eakte" />		
+									</td>    
+									
+								</tr>
+							</tbody>
+					</table>				
+		  			
+					
+				</fieldset>
+		
+				<fieldset>
+					<legend>Nachricht</legend>
+					<div id="vorlagen" name="vorlagen">
+						<label for="in_vorlagen">Vorlagen :</label>
+						<input type="text" id="in_vorlagen" name="in_vorlagen"></input>
+						<button id="btn_vorlagen" name="btn_vorlagen">
+							<i class="fa fa-ellipsis-h"></i>
+						</button>
+					</div>			
+				</fieldset>
+				
+				<!-- HTML EDITOR -->
+				<div id="editor_ENachricht"></div>	
+				<!-- EOF HTML EDITOR -->
+			</div>	
+			<!-- EOF BODY SECTION -->					
+			
+			<!-- FOOTER SECTION -->
+            <div class="footer">
+				<button id="btn_save" name="btn_save">SAVE</button>
+				<button id="btn_cancel" name="btn_cancel">CANCEL</button>
+			</div>
+			<!-- EOF FOOTER -->	
+        </div>
+	<!-- EOF LAYOUT -->
+
+
+
+{{end}}
+
