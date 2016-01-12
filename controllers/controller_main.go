@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"../render"
+	"GoENachricht/render"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -42,14 +42,14 @@ func InitContent(title, version, protPort string) {
 func GetUserDefaultData(w http.ResponseWriter, req *http.Request) {
 
 	result := UserDefaultData{"OK", InitData{UserSettings, AllSubjects, AllUsers}}
-	js, err := json.Marshal(result)
+	js, err := json.Marshal(result)	
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	//fmt.Println(result)
 	w.Header().Set("Content-Type", "application/json")
-	w.Write(js)
+	w.Write(js)	
 }
 
 /*-----------------------------------------------------------------------------

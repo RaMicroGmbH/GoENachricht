@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./controllers"
-	"./routes"
-	"./system/assetfs"
+	"GoENachricht/controllers"
+	"GoENachricht/routes"
+	"GoENachricht/system/assetfs"
 	"net/http"
 )
 
@@ -72,6 +72,7 @@ func startUIService(Port string) {
 	mux.Handle("/css/images/", http.FileServer(assetfs.AssetFS()))
 	mux.Handle("/css/images/igHtmlEditor/", http.FileServer(assetfs.AssetFS()))
 	mux.Handle("/fonts/", http.FileServer(assetfs.AssetFS()))
+	mux.Handle("/img/",   http.FileServer(assetfs.AssetFS()))
 
 	// Add routes
 	routes.Include(mux)

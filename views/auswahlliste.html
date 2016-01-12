@@ -9,32 +9,58 @@
 				<h1 class="panel-title" align="center"><span><b>RA-MICRO <span style='color: red'>Go</span> App E-Nachricht </b><span style="font-size: 18px">{{.Version}}</span></span></h1>
 		    </div> 				
 	        <div class="panel-body">
-			 	<!--<form role="form" class="form-horizontal" id="fm_anepostkorb">-->
 				<div class="panel panel-default">
-				    <div id="auswahl_controls" class="panel-body">
-						<table>
-						 	<tr>
-								<td><button class="btn btn-default  btn-lg"  id="btn_add">ADD</button></td>
-								<td><button class="btn btn-default  btn-lg"  id="btn_remove">DELETE</button></td>
-							</tr>							
-						</table>
-					</div>
+				    <!-- <div id="auswahl_controls" class="panel-body"> -->
+						
+						<table class="table borderless tbl01">						    
+							<tbody>						    
+							
+					    	<tr class="borderless">
+								<td>
+									<div class="checkbox checkbox-success check01">
+									<input type="checkbox" id="cb_Ziffern" />
+									<label for="cb_sofortnachricht"><b>&nbsp;Ziffernwahl</b></label>
+									</div>									
+								</td>									
+								<td>
+									<div class="checkbox checkbox-success check02">
+										<input type="checkbox" id="cb_Auswahl" />
+										<label for="cb_sofortnachricht"><b>&nbsp;Auswahlliste ausklappen</b></label>
+									</div>	
+								</td>    
+								<td>
+									<p class="pVor">Vorschlag</p>
+								</td>
+								<td>
+									<select id="Xselect" class="form-control opt1">
+									<option id="0">Ich bin beschäftigt - Bitte nicht stören</option>
+									<option id="1">Ich bin in einer Besprechung</option>
+									<option id="2">Bitte dringend erledigen</option>
+									<option id="3">Bitte Termin Verlegen/neuen Termin vereinbaren</option>
+									<option id="4">Bitte rufen Sie mich wieder an</option>
+									<option id="5">--leer--</option>
+									</select>
+								</td>
+								<td>
+									<button  type="button" class="btn btn-default bt01"  id="btn_add">+</button>
+								</td>
+							</tr>
+							</tbody>
+						</table>				
+		  				<!--
+						<label>
+						<img id="img_Help" class="imghelp" src="/img/help-32x32.png" alt="Help"/>
+							<img id="img_Info" class="imginfo" src="/img/info_48x48.png" alt="Info"/>				
+						</label>
+						-->
+					<!--  </div> -->
 				</div>
 					
-					<div id="preSubjects">
-						<ul id="subjectslist" class="list-group">
-						<!--
-						  <li class="list-group-item">Ich bin beschäftigt - Bitte nicht stören</span></li>
-						  <li class="list-group-item"><span class="ui-icon ui-icon-arrowthick-2-n-s">Item 2</span></li>
-						  <li class="list-group-item"><span class="ui-icon ui-icon-arrowthick-2-n-s">Item 3</span></li>
-						  <li class="list-group-item"><span class="ui-icon ui-icon-arrowthick-2-n-s">Item 4</span></li>
-						  <li class="list-group-item"><span class="ui-icon ui-icon-arrowthick-2-n-s">Item 5</span></li>
-						  <li class="list-group-item"><span class="ui-icon ui-icon-arrowthick-2-n-s">Item 6</span></li>
-						  <li class="list-group-item"><span class="ui-icon ui-icon-arrowthick-2-n-s">Item 7</span></li>
-						 -->
-						</ul>
-					</div>
-				<!--</form>-->
+				<div id="subjectslist" class="hoverTable">
+					 <ul id="ulsubjectslist" class="list-group test">
+					  <!-- Main List here -->
+					</ul>
+				</div>
 			</div>
 			
 			<div class="panel-footer clearfix">
@@ -42,7 +68,7 @@
             		<button  class="btn btn-default  btn-lg" id="btn_auswahl_save">
 						<span class="glyphicon glyphicon-ok"></span>
 					</button>
-            		<button class="btn btn-default btn-lg" id="btn_auswahl_cancel">
+            		<button class="btn btn-default btn-lg" id="btn_auswahl_delete">
 						<span class="glyphicon glyphicon-remove"></span>
 					</button>
         		</div>

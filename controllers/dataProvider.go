@@ -5,7 +5,7 @@ import (
 	_ "fmt"
 	_ "golang.org/x/sys/windows/registry" //get package with "go get godoc.org/golang.org/x/sys"
 	"io/ioutil"
-	_ "log"
+	"log"
 	"regexp"
 	"strings"
 )
@@ -86,6 +86,7 @@ func getSebjectsettingsFromENachrichtBetreff(data []string) {
 }
 
 func getUserNamesFromBenutzerIni(data []string) {
+	log.Println("DATPATH :" + RADatPath)
 	var userId string
 	for _, element := range data {
 		if RegexpFindUser.MatchString(element) == true {

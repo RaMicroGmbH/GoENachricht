@@ -41,9 +41,19 @@ input[type=number] {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
 .btn-lg {
+	height: 40px;
+	width: 85px;
+}
+   /*  */
+
+.tabbutt{
+	width: 200px;
+	height: 55px;
+	position: relative;
+	top:25px;
 	
-	width:100px !important;
 }
 
 .form-control {
@@ -76,7 +86,7 @@ input[type=number] {
 }
 
 .auswahllist {
-	width: 800px; 
+	width: 600px; 
 	height: 550px; 
 	position: absolute;
 	left: 50%; 
@@ -114,24 +124,6 @@ input[type=number] {
 	margin-left:-300px;
 }
 
-.imghelp {
-	height:30px;
-	width:30px;
-	position:absolute;
-	top:120px;
-	left:50%;
-	margin-left:320px;
-}
-
-.imginfo {
-	height:30px;
-	width:30px;
-	position:absolute;
-	top:120px;
-	left:50%;
-	margin-left:360px;
-}
-
 .htmlEdit {
 	position:absolute; 
 	top:0px; 
@@ -156,7 +148,7 @@ input[type=number] {
 }
 
 .DivTools {
-	width: 800px;
+	width: 600px;
 	height: 400px;
 	position: absolute;
 	top: 580px;
@@ -171,7 +163,80 @@ input[type=number] {
 	resize: none;
 }
 
+.pnl01 {
+	position: absolute;
+	height: 250px;
+	width: 600px;
+}
 
+.check01 {
+	position: relative;
+	top: -4px;
+	left: 50%;
+	margin-left: -10px;
+}
+
+.check02 {
+	position: relative;
+	top: -4px;
+	left: 50%;
+	margin-left: -20px;
+}
+
+.pVor {
+	position: relative;
+	top: 8px;
+	left: 50%;
+	margin-left: -22px;
+	font-size:14px;
+}
+
+.opt1 {
+	position: relative;
+	width: 298px;
+	top: 3px;
+	left: 50%;
+	margin-left: -170px;
+}
+
+.bt01 {
+	position: relative;
+	top: 3px;
+	left: 50%;
+	margin-left: -40px;
+	font-weight: bold;
+}
+
+.tbl01{
+	position: relative;
+	top: -1px;
+}
+
+
+/*-----------------------------------------------------------------------------
+|						 TABLE MOUSEOVER EFFECT								   |
+ -----------------------------------------------------------------------------*/
+.hoverTable{
+   	width:100%; 
+   	border-collapse:collapse; 
+}
+.hoverTable li{ 
+   	padding:8px; 
+	border:##E6E6E6 1px solid; 
+	background: #FFFFFF;
+}
+
+.hoverTable li:hover {
+    background: #b8d1f3;
+}
+
+.hoverTable li > button {
+    display: none;
+}
+
+.hoverTable li:hover > button {
+    display: inline;
+}
 
 
 /*-----------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"../controllers"
+	"GoENachricht/controllers"
 	"net/http"
 )
 

@@ -3,8 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-
-	"./controllers"
+	"GoENachricht/controllers"
 	"log"
 	"net/smtp"
 	"os"
