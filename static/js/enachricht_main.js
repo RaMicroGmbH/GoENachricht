@@ -118,9 +118,8 @@ $(document).ready(function () {
 
 		$.each( data.IniData.Subject.Examples, function( key, value ) {		
 		    if (value != ""){
-
 				AddListItem("",value)
-
+			}
 		//		var $li = $('<li class="list-group-item"/>'),
 		//		$input = $('<input style="border:none; width:95%; height:80%;" /> ', 
 		//		{   class: 'currentSubjectsList',     
@@ -128,8 +127,6 @@ $(document).ready(function () {
 		//		id: value + '_' + key}).val(value);
 		//		$li.append($input);
     	//      $("#subjectslist").append($li); 
-			
-			}
 		});
 
 		/*
@@ -270,8 +267,10 @@ $(document).ready(function () {
 	$('#btn_auswahl_save').on('click',function() {
 		jsonObj = [];
 		sortingTable()
-			
+		
 		var Qty = $('#subjectslist').children().length;
+		if (Qty <= 1) {return;}	
+		
 		for ( i=0; i< (Qty-1) ; i++){
 			var IDX = $('#subjectslist li').eq(i).attr('id');
 			var TXT = $('#subjectslist li').eq(i).children('input').val();
