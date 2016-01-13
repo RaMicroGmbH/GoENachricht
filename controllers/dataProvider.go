@@ -67,7 +67,6 @@ func HandleFiles() {
 	}
 	ioutil.WriteFile("MyFile1.txt", JsonInitData, 0x777)
 	//fmt.Println(string(JsonInitData))
-
 }
 
 func getSebjectsettingsFromENachrichtBetreff(data []string) {
