@@ -108,7 +108,7 @@ func viewsBaseHtml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "views/base.html", size: 215, mode: os.FileMode(438), modTime: time.Unix(1449828982, 0)}
+	info := bindataFileInfo{name: "views/base.html", size: 215, mode: os.FileMode(438), modTime: time.Unix(1452676680, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -128,7 +128,7 @@ func viewsIndexHtml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "views/index.html", size: 3414, mode: os.FileMode(438), modTime: time.Unix(1449829227, 0)}
+	info := bindataFileInfo{name: "views/index.html", size: 3414, mode: os.FileMode(438), modTime: time.Unix(1452676680, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -148,7 +148,7 @@ func viewsIndex_igHtml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "views/index_ig.html", size: 2273, mode: os.FileMode(438), modTime: time.Unix(1449223314, 0)}
+	info := bindataFileInfo{name: "views/index_ig.html", size: 2273, mode: os.FileMode(438), modTime: time.Unix(1452676680, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -168,7 +168,7 @@ func viewsBaseFooterHtml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "views/base/footer.html", size: 1123, mode: os.FileMode(438), modTime: time.Unix(1449479279, 0)}
+	info := bindataFileInfo{name: "views/base/footer.html", size: 1123, mode: os.FileMode(438), modTime: time.Unix(1452676680, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -188,7 +188,7 @@ func viewsBaseHeaderHtml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "views/base/header.html", size: 965, mode: os.FileMode(438), modTime: time.Unix(1449223314, 0)}
+	info := bindataFileInfo{name: "views/base/header.html", size: 965, mode: os.FileMode(438), modTime: time.Unix(1452676680, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
