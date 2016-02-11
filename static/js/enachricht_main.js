@@ -288,6 +288,9 @@ $(document).ready(function () {
 
 
 
+function demo(){
+	//this is to test github sync !
+}
 
 
 
