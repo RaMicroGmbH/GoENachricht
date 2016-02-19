@@ -121,55 +121,6 @@ func UpdateENachrichtData(w http.ResponseWriter, req *http.Request) {
 	w.Write(js)
 }
 
-/*-----------------------------------------------------------------------------
-	Receiving E-Nachricht-Attachement Data in Base64 format
--------------------------------------------------------------------------------*/
-/*
-func EncBase64Data(w http.ResponseWriter, req *http.Request) {
-	req.ParseForm()
-	var encB64 = req.FormValue("encB64")
-	var filename = req.FormValue("fn")
-
-	dataFirstPart := strings.Split(encB64, "base64,")
-	encdata := strings.Split(dataFirstPart[1], "\">")
-
-	//dataBase64 := []byte(encdata[0])
-
-	data, err := base64.StdEncoding.DecodeString(encdata[0])
-
-	var fpath = getAttachmentsPath(filename)
-
-	ioutil.WriteFile(fpath, []byte(data), 0x777)
-
-	if err != nil {
-		fmt.Println("error:", err)
-		return
-	}
-
-	//fmt.Printf("%q\n", data)
-
-	result := Result{"OK", "Base64Data Successfully received !"}
-	js, err := json.Marshal(result)
-	Checkerror(err)
-
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(js)
-}
-
-func getENachrichtPath() string {
-
-	if enachrichtsPath == "" {
-		//host, _ := os.Hostname()
-		enachrichtsPath = filepath.Join(radata.RamicroDatPath(), "go", "ENachrichtDemo", "AR", utils.GetYear(), utils.GetMonth(), utils.GetDay())
-		_, err := os.Stat(enachrichtsPath)
-		if err != nil {
-			os.MkdirAll(enachrichtsPath, 0777)
-		}
-		enachrichtsPath = filepath.Join(enachrichtsPath)
-	}
-	return enachrichtsPath
-}
-*/
 /* Check error */
 func Checkerror(err error) {
 	if err != nil {
