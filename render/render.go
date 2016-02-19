@@ -1,7 +1,7 @@
 package render
 
 import (
-	"GoENachricht/system/assets"
+	"../system/assets"
 	"html/template"
 	"net/http"
 )

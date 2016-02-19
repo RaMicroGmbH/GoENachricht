@@ -1,48 +1,52 @@
 {{define "body"}}
 
-
 	<!-- AUSWAHLLISTE BEARBEITEN --> 
 	<div class="container">
 
 	   <div class="panel panel-default">
 			<div  class="panel-heading">   
+				<a href="http://localhost:50001/enachricht/ui" >
+		          <span class="glyphicon glyphicon-chevron-left pull-left" style="font-size:1.5em;"></span>
+		        </a>
 				<h1 class="panel-title" align="center"><span><b>RA-MICRO <span style='color: red'>Go</span> App E-Nachricht </b><span style="font-size: 18px">{{.Version}}</span></span></h1>
 		    </div> 				
 	        <div class="panel-body">
 				<div class="panel panel-default">
 				    <!-- <div id="auswahl_controls" class="panel-body"> -->
 						
-						<table class="table borderless tbl01">						    
+						<table class="table borderless tbl-auswahllist">						    
 							<tbody>						    
 							
 					    	<tr class="borderless">
 								<td>
-									<div class="checkbox checkbox-success check01">
+									<div class="checkbox checkbox-success cb-ziffernwahl">
 									<input type="checkbox" id="cb_Ziffern" />
-									<label for="cb_sofortnachricht"><b>&nbsp;Ziffernwahl</b></label>
+									<label for="cb_Ziffern">&nbsp;Ziffernwahl</label>
 									</div>									
 								</td>									
 								<td>
-									<div class="checkbox checkbox-success check02">
+									<div class="checkbox checkbox-success cb-auswahllist">
 										<input type="checkbox" id="cb_Auswahl" />
-										<label for="cb_sofortnachricht"><b>&nbsp;Auswahlliste ausklappen</b></label>
+										<label for="cb_Auswahl">&nbsp;Auswahlliste ausklappen</label>
 									</div>	
 								</td>    
 								<td>
-									<p class="pVor">Vorschlag</p>
+									<p class="p-vorschlag">Vorschlag</p>
 								</td>
 								<td>
-									<select id="Xselect" class="form-control opt1">
-									<option id="0">Ich bin beschäftigt - Bitte nicht stören</option>
-									<option id="1">Ich bin in einer Besprechung</option>
-									<option id="2">Bitte dringend erledigen</option>
-									<option id="3">Bitte Termin Verlegen/neuen Termin vereinbaren</option>
-									<option id="4">Bitte rufen Sie mich wieder an</option>
-									<option id="5">--leer--</option>
-									</select>
+									<div class=" col-sm-9 btn-group select float-left panel-collapse collapse in" stlye="width:85%">
+											
+                                        <button type="button" class="btn btn-default col-sm-9" id="btn_subjectlist">&nbsp;</button> 
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width=10%">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+							
+                                        <ul class="dropdown-menu scrollable-menu listitem-subjects col-sm-10" id="sublist" style="width:100%;"></ul>
+                                    </div>	
 								</td>
 								<td>
-									<button  type="button" class="btn btn-default bt01"  id="btn_add">+</button>
+									<button  type="button" class="btn btn-default btn-add"  id="btn_add">+</button>
 								</td>
 							</tr>
 							</tbody>
@@ -57,10 +61,13 @@
 				</div>
 					
 				<div id="subjectslist" class="hoverTable">
-					 <ul id="ulsubjectslist" class="list-group test">
-					  <!-- Main List here -->
+					
+					 <ul id="ulsubjectslist" class="list-group">
+					 <!-- Main List here--> 
 					</ul>
+					
 				</div>
+				
 			</div>
 			
 			<div class="panel-footer clearfix">

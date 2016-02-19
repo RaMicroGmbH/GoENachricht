@@ -1,10 +1,12 @@
 package main
 
 import (
-	"GoENachricht/controllers"
-	"GoENachricht/routes"
-	"GoENachricht/system/assetfs"
 	"net/http"
+
+	"./system/assetfs"
+
+	"./controllers"
+	"./routes"
 )
 
 /*
@@ -62,7 +64,7 @@ import (
 
 func startUIService(Port string) {
 
-	controllers.InitContent("RA-Micro Go App Volltext Suche", Version, protPortFlag)
+	controllers.InitContent("RA-Micro Go App Volltext Suche", Version)
 
 	mux := http.NewServeMux()
 
@@ -72,7 +74,7 @@ func startUIService(Port string) {
 	mux.Handle("/css/images/", http.FileServer(assetfs.AssetFS()))
 	mux.Handle("/css/images/igHtmlEditor/", http.FileServer(assetfs.AssetFS()))
 	mux.Handle("/fonts/", http.FileServer(assetfs.AssetFS()))
-	mux.Handle("/img/",   http.FileServer(assetfs.AssetFS()))
+	mux.Handle("/img/", http.FileServer(assetfs.AssetFS()))
 
 	// Add routes
 	routes.Include(mux)

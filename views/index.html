@@ -10,90 +10,129 @@
 <div class="container">
 	
    <div class="panel panel-default">
-			<div  class="panel-heading">   
+			<div class="panel-heading">   
 				<h1 class="panel-title" align="center"><span><b>RA-MICRO <span style='color: red'>Go</span> App E-Nachricht </b><span style="font-size: 18px">{{.Version}}</span></span></h1>
 		    </div> 				
-	        <div class="panel-body">
-			 	<form role="form" class="form-horizontal" id="fm_anepostkorb">
+			<div id="alert_placeholder"></div>
+	        <div class="panel-body" id="panelbody">
 				
-				<fieldset>
-					<legend>An E-Postkorb</legend>
-					<table class="table borderless">
-						<thead><b></b></thead>						    
-					    <tbody>						   
-					    	<tr class="borderless">
-								<td>      
-									<div class="form-group">
-										<div id="checkboxSelectUsers" class="col-sm-3">											
-											<select class="form-control col-sm-3 checkbox" id="userslist" >
-													
-											</select>											
-										</div>
-										<div class="col-sm-1"></div>
-										<div class="col-sm-3 checkbox">
-											<input type="checkbox" id="cb_sofortnachricht" />
-											<label for="cb_sofortnachricht"><b>&nbsp;Als Sofortnachricht anzeigen</b></label>
-										</div>								
-										<div class="col-sm-1"><label for="in_eakte">E-Akte :</label></div>						 											
-										<div class="col-sm-4"><input type="text" class="form-control" id="in_eakte"/></div>							      	
+			 	<form role="form" class="form-inline" id="fm_anepostkorb">	
+				<!-- Section for An-EPostkorb -->								
+					<table class="table borderless">						
+						<caption><b> An E-Postkorb</b></caption>
+					    <tbody> 							
+					    	<tr class="borderless">															
+								<td>								
+									<div class="col-sm-6 btn-group select form-group" id="users_toggle">
+                                        <button type="button" class="btn btn-default col-sm-5 " style="width:90%;" id="btn_userslist"> &nbsp; </button> 
+                                        <button type="button" style="width:5%;" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        	<span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>                                            
+                                        <ul class="dropdown-menu scrollable-menu listitem-users col-sm-5" id="userslist" role="menu" ></ul>
+                                    </div>							
+									
+									<div class="col-sm-3 checkbox checkbox-success"  id="section_sofortanzeigen" >
+										<input type="checkbox" id="cb_sofortnachricht"/>
+										<label for="cb_sofortnachricht">&nbsp; &nbsp;Als Sofortnachricht anzeigen</label>
+									</div>								
+									
+									<div class="form-group" id="section_eakte_p" >									    
+									    <p class="form-control-static">E-Akte: </p>
 									</div>
-								</td>
-							</tr>							
+									<div class="form-group" id="section_eakte_in">										
+									    <input type="text" class="form-control" id="in_eakte" >
+									</div>	
+							    </td>								
+							</tr>
 						</tbody>
 					</table>
-				</fieldset>
+				  
+					<hr>
+				
 				<!--EOF Section for An-EPostkorb -->
 				
-				<!-- Section for Nachricht -->
-				<fieldset>
-					<legend>Nachricht</lengend>
-					<table class="table borderless">
-						<!--<thead><b>Nachricht</b></thead>-->				    
+				<!-- Section for Nachricht -->				
+					<table class="table borderless">					
+					  <caption><b>Nachricht</b></caption>
 					    <tbody>						   
 					    	<tr class="borderless">
-								<td>      
-									<div class="form-group">										
-										<div class="col-sm-2 ">
-											<label for="in_vorlagen"><span>Vorlagen:</span></label>
-										</div>
-										
-										<div class="col-sm-9">												
-											<input  class="form-control" type="text" id="in_vorlagen" name="in_vorlagen"></input>
-										</div>
-										
-										<div class="col-sm-1">
-										 	<button type="button" class="btn btn-default" id="btn_auswahlliste">
-												<span class="btn-default">
-													<i class="fa fa-ellipsis-h"></i>
-												</span>
-											</button>										
-										</div>
-										
+								<td> 								
+									<div class="form-group pull-left" >									    
+									    <p class="form-control-static">Vorlagen: </p>
+									</div>
+									
+									<div class="form-group col-sm-10 btn-group" id="vorlagen_toggle">									    
+									   <button type="button" class="btn btn-default col-sm-9" id="btn_subjectlist" style="width:95%;"> &nbsp; </button> 
+                                       <button type="button" class="btn btn-default dropdown-toggle" id="btn_caretvorlagen" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:5%;">
+                                           <span class="caret"></span>
+                                           <span class="sr-only">Toggle Dropdown</span>
+                                       </button>
+						
+                                       <ul class="dropdown-menu scrollable-menu listitem-subjects col-sm-10" id="sublist" style="width:100%;"></ul>
+									</div>	
+									
+									<div class="col-sm-1 from-group pull-right" >										
+									 	<button type="button" class="btn btn-default" id="btn_auswahlliste" >
+											<span class="btn-default">
+												<i class="fa fa-ellipsis-h"></i>
+											</span>
+										</button>
 									</div>
 								</td>
 							</tr>
 						</tbody>
 					</table>
-				</fieldset>
+					<hr>
+				<!-- EOF Section for Nachricht -->		
+							
+				<!-- Section for Attachements -->								
+					<table class="table borderless">										    
+					    <tbody>						   
+					    	<tr class="borderless">
+								<td>   
+									<div class="from-group fileUpload btn btn-default pull-left" style="margin-top:2px;" id="btn_attachment">
+   				 						<span>
+											<!--<i class="fa fa-paperclip 2x">Anlagen</i>	-->										
+											Anlagen
+										</span>
+    									<input type="file" class="upload" id="in_attachment" /> 																				
+									</div>																			
+								
+									<div class="form-group col-sm-10 ">									    
+									    <input class="form-control" type="text" id="in_attachmentname"  style="width:100%" placeholder="Anlagen..."/>															
+									</div>									
+								</td>
+							</tr>
+						</tbody>
+					</table>									
+				<!-- EOF Section for Attachments -->
 			</form>	
-				<!--EOF Section for Nachricht -->
+	
+			<!-- Section for E-Nachricht editor -->
+			<div id="edt_ENachricht" tabindex="-1"></div>	
+			<!-- EOF Section for E-Nachriht editor -->
+			
+			</div><!-- EOF DIV Panel Body -->				
 				
-				<!-- Section for E-Nachriht editor -->
-				<div id="edt_ENachricht"></div>	
-				<!-- EOF Section for E-Nachriht editor -->
-				
-			</div><!-- EOF PANEL BODY -->
+			<!-- FOOTER  -->
 			<div class="panel-footer clearfix">
         		<div class="pull-right">
-            		<button  class="btn btn-default  btn-lg" id="btn_main_save">
+					<button  class="btn btn-default btn-lg" title="Senden" id="btn_main_send">
+						<span class="glyphicon glyphicon-envelope"></span>
+					</button>
+            		<button  class="btn btn-default  btn-lg" title="OK + Schlie&szlig;en" id="btn_main_save">
 						<span class="glyphicon glyphicon-ok"></span>
 					</button>
-            		<button class="btn btn-default btn-lg" id="btn_main_cancel">
+            		<button class="btn btn-default btn-lg" title="Schlie&szlig;en" id="btn_main_cancel">
 						<span class="glyphicon glyphicon-remove"></span>
 					</button>
         		</div>
     		</div>
-	</div> <!-- EOF PANEL-->
+			<!--EOF FOOTER -->
+			
+			</div><!-- EOF PANEL -->
+			
  </div>
 <!-- EOF CONTAINER FOR E-NACHRICHT -->
 
