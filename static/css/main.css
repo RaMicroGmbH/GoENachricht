@@ -1,0 +1,346 @@
+table {border-spacing: 25px 10px;}
+td    {padding: 10px;}
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid black;   
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.panel-title {
+	font-size: 20px;
+}
+
+.table-responsive {
+	overflow-x: hidden !important;
+}
+
+.borderless tr td {
+    border: none !important;    
+}
+
+.dataspace tr td{
+	padding:10px;
+}
+
+.btn-lg {
+	height: 40px;
+	width: 85px;
+}
+    
+
+.tabbutt{
+	width: 200px;
+	height: 55px;
+	position: relative;
+	top:25px;
+	
+}
+
+.opt1 {
+	position: relative;
+	width: 298px;
+	top: 3px;
+	left: 50%;
+	margin-left: -170px;
+}
+
+
+.form-control {
+    padding-right: 30px;
+}
+
+.has-feedback .form-control-feedback {
+	top: -8px !important;
+	right: 10px !important;
+}
+
+.form-control + .glyphicon {
+    position: absolute;
+    right: 0;
+    padding: 8px 27px;
+}
+
+.glyphicon-ok {
+	color:#00FF00;
+}
+
+.glyphicon-remove {
+	color:#FF0000;
+}
+
+.glyphicon-eye-open {
+    position: absolute;  
+    right:0;
+    padding: 8px 54px;
+}
+
+.htmlEdit {
+	position:absolute; 
+	top:0px; 
+	left:50%; 
+	margin-left:0px; 
+	border-width:5px; 	
+	background-color: rgb(255, 240, 255);
+	font: 14px/normal Arial, Calibri, Tahoma, Helvetica, Verdana; 
+	color: rgb(255, 210, 240); 
+	text-transform: none; 
+	text-indent: 0px; 
+	letter-spacing: normal; 
+	word-spacing: 0px; 
+	white-space: normal; 
+	orphans: 2; 
+	widows: 2; 
+	font-size-adjust: auto; 
+	font-stretch: normal; 
+	-webkit-text-size-adjust: auto; 
+	-webkit-text-stroke-width: 0px; 
+}
+
+.pnl01 {
+	position: absolute;
+	height: 250px;
+	width: 600px;
+}
+
+.cb-ziffernwahl {
+	position: relative;
+	top: -4px;
+	left: 50%;
+	margin-left: -10px;
+}
+
+.cb-auswahllist {
+	position: relative;
+	top: -4px;
+	left: 50%;
+	margin-left: -40px;
+}
+
+.p-numbering{
+	position:absolute; 
+	left:4px; 
+	top:11px;
+}
+
+.p-vorschlag {
+	position: relative;
+	top: 8px;
+	left: 50%;
+	margin-left: -22px;
+	font-size:14px;
+}
+
+.in-sampleitem{
+	position:absolute; 
+	width:89%; 
+	height:50%; 
+	left:34px; 
+	top:10px; 
+	border:none;
+}
+
+.btn-add {
+	position: relative;
+	top: 3px;
+	left: 50%;
+	margin-left: -40px;
+	font-weight: bold;
+}
+.sp-glyph-rmv{
+	position:absolute; 
+	width:25px; 
+	left:94%; 
+	top:12px;
+}
+
+.sp-glyph-add{
+	position:absolute; 
+	width:25px; 
+	left:97%; 
+	top:12px;
+}
+
+.tbl-auswahllist{
+	position: relative;
+	top: -1px;
+}
+
+
+/*-----------------------------------------------------------------------------
+|						 TABLE MOUSEOVER EFFECT								   |
+ -----------------------------------------------------------------------------*/
+.hoverTable{
+   	width:100%; 
+   	border-collapse:collapse; 
+}
+.hoverTable li{ 
+   	padding:8px; 
+	border:##E6E6E6 1px solid; 
+	background: #FFFFFF;
+}
+
+.hoverTable li:hover {
+    background: #b8d1f3;
+}
+
+.hoverTable li > span {
+    display: none;
+}
+
+.hoverTable li:hover > span {
+    display: inline;
+}
+
+
+/*-----------------------------------------------------------------------------
+|						 CHECKBOX STYLING 									   |
+ -----------------------------------------------------------------------------*/
+.checkbox label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 5px;
+}
+
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 0;
+  margin-left: -23px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 2px;
+  font-size: 15px;
+  color: #555555;
+}    
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  z-index: 1;
+
+}
+
+.checkbox input[type="checkbox"]:checked + label::after{
+  font-family: "FontAwesome";
+  content: "\f00c";
+}
+
+.checkbox-success input[type="checkbox"]:checked + label::before{
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.checkbox-success input[type="checkbox"]:checked + label::after{
+  color: #fff;
+}
+
+
+
+/*-----------------  EOF CHECKBOX STYLING   --------------------------------*/	
+
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 8px;
+}
+
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.container{
+	width:98%;
+}
+
+
+/*---------		Individual element Styling        -------------------------*/
+#edt_ENachricht{
+	
+	margin-right: 10px;		
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#alert_placeholder{
+	width:99%; 
+	margin:0.5%; 
+	text-align:center;	
+}
+
+#panelbody{
+	align:center;
+}
+
+#users_toggle{
+	left:5%;
+	margin-left:-5px;
+}
+
+#userslist{
+	width:100%; 
+	position:absolute; 
+	z-index:999; 
+	overflow-y:auto;
+}
+
+#section_sofortanzeigen{
+	left:5%; 
+	margin-left:-5px;
+}
+
+#section_eakte_p{
+	left:10%; 
+	margin-left:-5px;
+}
+
+#section_eakte_in{
+	left:1%; 
+	margin-left:-1px;
+}
+
+#vorlagen_toggle{
+	left:2%; 
+	margin-left:-5px;
+}
+
+#btn_auswahlliste{
+	left:1%; 
+	margin-left:-1px;
+}

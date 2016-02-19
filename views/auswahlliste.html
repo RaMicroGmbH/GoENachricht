@@ -1,0 +1,89 @@
+{{define "body"}}
+
+	<!-- AUSWAHLLISTE BEARBEITEN --> 
+	<div class="container">
+
+	   <div class="panel panel-default">
+			<div  class="panel-heading">   
+				<a href="http://localhost:50001/enachricht/ui" >
+		          <span class="glyphicon glyphicon-chevron-left pull-left" style="font-size:1.5em;"></span>
+		        </a>
+				<h1 class="panel-title" align="center"><span><b>RA-MICRO <span style='color: red'>Go</span> App E-Nachricht </b><span style="font-size: 18px">{{.Version}}</span></span></h1>
+		    </div> 				
+	        <div class="panel-body">
+				<div class="panel panel-default">
+				    <!-- <div id="auswahl_controls" class="panel-body"> -->
+						
+						<table class="table borderless tbl-auswahllist">						    
+							<tbody>						    
+							
+					    	<tr class="borderless">
+								<td>
+									<div class="checkbox checkbox-success cb-ziffernwahl">
+									<input type="checkbox" id="cb_Ziffern" />
+									<label for="cb_Ziffern">&nbsp;Ziffernwahl</label>
+									</div>									
+								</td>									
+								<td>
+									<div class="checkbox checkbox-success cb-auswahllist">
+										<input type="checkbox" id="cb_Auswahl" />
+										<label for="cb_Auswahl">&nbsp;Auswahlliste ausklappen</label>
+									</div>	
+								</td>    
+								<td>
+									<p class="p-vorschlag">Vorschlag</p>
+								</td>
+								<td>
+									<div class=" col-sm-9 btn-group select float-left panel-collapse collapse in" stlye="width:85%">
+											
+                                        <button type="button" class="btn btn-default col-sm-9" id="btn_subjectlist">&nbsp;</button> 
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width=10%">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+							
+                                        <ul class="dropdown-menu scrollable-menu listitem-subjects col-sm-10" id="sublist" style="width:100%;"></ul>
+                                    </div>	
+								</td>
+								<td>
+									<button  type="button" class="btn btn-default btn-add"  id="btn_add">+</button>
+								</td>
+							</tr>
+							</tbody>
+						</table>				
+		  				<!--
+						<label>
+						<img id="img_Help" class="imghelp" src="/img/help-32x32.png" alt="Help"/>
+							<img id="img_Info" class="imginfo" src="/img/info_48x48.png" alt="Info"/>				
+						</label>
+						-->
+					<!--  </div> -->
+				</div>
+					
+				<div id="subjectslist" class="hoverTable">
+					
+					 <ul id="ulsubjectslist" class="list-group">
+					 <!-- Main List here--> 
+					</ul>
+					
+				</div>
+				
+			</div>
+			
+			<div class="panel-footer clearfix">
+        		<div class="pull-right">
+            		<button  class="btn btn-default  btn-lg" id="btn_auswahl_save">
+						<span class="glyphicon glyphicon-ok"></span>
+					</button>
+            		<button class="btn btn-default btn-lg" id="btn_auswahl_delete">
+						<span class="glyphicon glyphicon-remove"></span>
+					</button>
+        		</div>
+    		</div>
+			
+		</div>
+	</div>
+
+	<!-- EOF CONTAINER FOR AUSWAHLLISTE BEARBEITEN -->
+
+{{end}}
